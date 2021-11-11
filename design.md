@@ -30,35 +30,35 @@ The software will allow users to:
 
 ## Goals and milestones
 * Requirements analysis & validation
-    [x] *place* functionality
-    [x] *move* functionality
-    [x] *left/right* functionality
-    [x] *report* functionality
-    [x] Command line functionality
-    [x] GUI functionality
+    - [x] *place* functionality
+    - [x] *move* functionality
+    - [x] *left/right* functionality
+    - [x] *report* functionality
+    - [x] Command line functionality
+    - [x] GUI functionality
 * Design
-    [x] Existing *argparse* CLI module
-    [x] Python 3.8 due to familiarity
-    [x] Test scripting with *unittest*
-    [x] Kanban board for Agile project management
+    - [x] Existing *argparse* CLI module
+    - [x] Python 3.8 due to familiarity
+    - [x] Test scripting with *unittest*
+    - [x] Kanban board for Agile project management
 * Implementation
-    [x] Classes for robot, table, controller and GUI
-    [x] Methods to compute or check robot position and heading
-    [x] Methods for command line input and GUI
-    [x] Fix bugs where necessary
+    - [x] Classes for robot, table, controller and GUI
+    - [x] Methods to compute or check robot position and heading
+    - [x] Methods for command line input and GUI
+    - [x] Fix bugs where necessary
 * Verification
-    [x] Unit testing
-    [x] Integration testing
-    [] User acceptance testing
+    - [x] Unit testing
+    - [x] Integration testing
+    - [ ] User acceptance testing
 * Documentation
-    [x] Requirements brief
-    [x] Design document
-    [x] Release notes
-    [x] Package dependency definitions
+    - [x] Requirements brief
+    - [x] Design document
+    - [x] Release notes
+    - [x] Package dependency definitions
 
 ## Timeline
-Nov  8, 2021    Receipt of project requirements, Requirements gathering
-Nov  9, 2021    Project planning, Wireframing
-Nov 10, 2021    Research, Pseudo-development
-Nov 11, 2021    Research, Development
-Nov 12, 2021    Development, Documentation
+* Nov  8, 2021 - Receipt of project requirements, Requirements gathering
+* Nov  9, 2021 - Project planning, Wireframing
+* Nov 10, 2021 - Research, Pseudo-development
+* Nov 11, 2021 - Research, Development
+* Nov 12, 2021 - Development, Documentation
