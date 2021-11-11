@@ -11,8 +11,10 @@ def main():
     robot = Robot(0,1,'north')
 
     # Test cases
-    robot.compute_coord(table, 1, 3)
-    print(robot)
+    rotate = ['left', 'right']
+    for i, headings in enumerate(rotate):
+        robot.compute_head(rotate[i])
+        print(robot)
     
 if __name__ == "__main__":
     main()
