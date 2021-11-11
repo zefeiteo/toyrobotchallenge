@@ -31,10 +31,10 @@ class Controller():
                             help="Exits program")
 
         # Initialises robot with place command
-        args, _ = self.parser.parse_known_args(input("\nPlace me somewhere: ").split())
+        args, _ = self.parser.parse_known_args(input("\nPlace me somewhere: ").lower().split())
         dX = int(args.place[0])
         dY = int(args.place[1])
-        head = args.place[2]
+        head = args.place[2].lower()
 
         # Checks if robot has exceeded Table dimensions or entered heading wrongly
         # A try...except block would be better practice, however could not be implemented as intended
@@ -48,7 +48,7 @@ class Controller():
 
         # Receives commands
         while True:
-            args, _ = self.parser.parse_known_args(input("\nYour wish is my command: ").split())
+            args, _ = self.parser.parse_known_args(input("\nYour wish is my command: ").lower().split())
             
             if args.move:
                 dX, dY = robot.compute_coord_move()
