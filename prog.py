@@ -8,7 +8,7 @@ def main():
     os.system('cls')
 
     # Initialise variables
-    table = Table(5,5)
+    table = Table(5, 5)
     robot = Robot(0, 0, None)
     controller = Controller()
 
