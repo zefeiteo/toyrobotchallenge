@@ -17,6 +17,8 @@
 * You will need to install the following:
     * argparse
     * setuptools
+    python -m pip install -r requirements.txt
+
 * You will need to set up your Python path.
 
 ## CLI commands

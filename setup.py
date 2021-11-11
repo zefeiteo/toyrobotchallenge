@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 requirements = [
     "setuptools",
-    "argparse>=1.4.0",
+    "argparse",
 ]
 
 setup(
