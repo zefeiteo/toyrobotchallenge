@@ -35,6 +35,7 @@ class Robot():
 
     def compute_coord_move(self):
         """Defines change in coordinates for given heading"""
+
         dX = {                      # Sine function can be used instead
             'north' : 0,
             'east'  : 1,
@@ -48,7 +49,7 @@ class Robot():
             'south' : -1,
             'west'  : 0,
         }[self.currHead]
-        
+
         return dX, dY
 
     def compute_head(self, dHead):
