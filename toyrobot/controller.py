@@ -36,12 +36,11 @@ class Controller():
             if args.place is None:
                 print("\nRobot placement failed, try [-p x y heading].")
             else:
+                # Stores robot placement information
+                dX = int(args.place[0])
+                dY = int(args.place[1])
+                head = args.place[2].lower()
                 break
-
-        # Stores robot placement information
-        dX = int(args.place[0])
-        dY = int(args.place[1])
-        head = args.place[2].lower()
 
         # Checks if robot has exceeded Table dimensions or entered heading wrongly
         # A try...except block would be better practice, however could not be implemented as intended
@@ -53,7 +52,7 @@ class Controller():
         if checkHead == InvalidHeadError:
             sys.exit(0)
 
-        # Receives commands
+        # Processes other commands - move, left, right, report, exit
         while True:
             args, _ = self.parser.parse_known_args(input("\nYour wish is my command: ").lower().split())
             
