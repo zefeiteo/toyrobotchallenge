@@ -28,14 +28,17 @@ class ControllerGUI():
     def display(self, headSym):
         matrix = []
 
+        # Define a blank display
         for row in range(self.tableX):
             tempRow = []
             for col in range(self.tableY):
                 tempRow.append('_')
             matrix.append(tempRow)
 
+        # Define robot position
         matrix[self.robotX][self.robotY] = headSym
         
+        # Print updated display
         for col in reversed(range(self.tableY)):
             for row in range(self.tableX):
                 print(matrix[row][col], end = " ")
