@@ -33,6 +33,24 @@ class Robot():
         else:
             InvalidPosError
 
+    def compute_coord_move(self):
+        """Defines change in coordinates for given heading"""
+        dX = {                      # Sine function can be used instead
+            'north' : 0,
+            'east'  : 1,
+            'south' : 0,
+            'west'  : -1,
+        }[self.currHead]
+
+        dY = {                      # Cosine function can be used instead
+            'north' : 1,
+            'east'  : 0,
+            'south' : -1,
+            'west'  : 0,
+        }[self.currHead]
+        
+        return dX, dY
+
     def compute_head(self, dHead):
         """Computes change in heading"""
 

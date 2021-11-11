@@ -8,12 +8,13 @@ def main():
 
     # Initialise variables
     table = Table(5,5)
-    robot = Robot(0,1,'north')
-
+    
     # Test cases
-    rotate = ['left', 'right']
-    for i, headings in enumerate(rotate):
-        robot.compute_head(rotate[i])
+    headings = ['north', 'east', 'south', 'west']
+    for i, _ in enumerate(headings):
+        robot = Robot(2,2,headings[i])
+        dX, dY = robot.compute_coord_move()
+        robot.compute_coord(table, dX, dY)
         print(robot)
     
 if __name__ == "__main__":
