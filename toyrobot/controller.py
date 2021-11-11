@@ -66,7 +66,7 @@ class Controller():
             if args.place:
                 print("\nRobot placement only allowed at the start of the program, please try again.")
             elif args.move:
-                dX, dY = robot.compute_coord_move()
+                dX, dY = robot.check_coord()
                 robot.compute_coord(table, dX, dY)
             elif args.left:
                 robot.compute_head('left')

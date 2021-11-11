@@ -35,7 +35,7 @@ class Robot():
             print("Table bounds exceeded in x-direction, please try again.\n")
             return InvalidPosError
 
-    def compute_coord_move(self):
+    def check_coord(self):
         """Defines change in coordinates for given heading"""
 
         dX = {                      # Sine function can be used instead
