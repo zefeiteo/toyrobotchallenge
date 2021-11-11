@@ -26,9 +26,10 @@ class ControllerGUI():
         return headSym
 
     def display(self, headSym):
-        matrix = []
+        """Configure controller display"""
 
         # Define a blank display
+        matrix = []
         for row in range(self.tableX):
             tempRow = []
             for col in range(self.tableY):
