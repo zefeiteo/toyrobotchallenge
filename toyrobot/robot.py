@@ -14,7 +14,7 @@ class Robot():
         self.currHead = currHead
 
     def __str__(self):
-        return f"Robot is at ({self.currX},{self.currY}) and facing {self.currHead}."
+        return f"{self.currX},{self.currY},{self.currHead.upper()}"
 
     def compute_coord(self, table, dX, dY):
         """Computes change in coordinates"""
