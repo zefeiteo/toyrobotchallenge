@@ -9,7 +9,7 @@ def main():
 
     # Initialise variables
     table = Table(5,5)
-    robot = Robot(None, None, None)
+    robot = Robot(0, 0, None)
     controller = Controller()
 
     # Start command line program
