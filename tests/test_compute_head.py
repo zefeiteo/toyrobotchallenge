@@ -31,7 +31,7 @@ class TestComputeHead(unittest.TestCase):
         assert robot.currHead == 'east'
 
     def test_exceed_bound(self):
-        robot = Robot(0, 0, 'north')
+        robot = Robot(0,0,'north')
         coord = robot.compute_coord(table, tDimX+1, tDimY+1)
         head = robot.compute_head('left')
         assert robot.currX == 0                         # X does not change
