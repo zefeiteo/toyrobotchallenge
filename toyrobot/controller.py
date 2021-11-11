@@ -4,6 +4,7 @@ import argparse
 from toyrobot.table import Table
 from toyrobot.robot import Robot
 from toyrobot.robot import InvalidPosError, InvalidHeadError
+from toyrobot.gui import ControllerGUI
 
 class Controller():
     """Command line program that controls the robot"""
@@ -54,6 +55,12 @@ class Controller():
 
         # Processes other commands - move, left, right, report, exit
         while True:
+
+            # Graphical user interface
+            gui = ControllerGUI(robot, table)
+            headSym = gui.lookup_headSym()
+            gui.display(headSym)
+
             args, _ = self.parser.parse_known_args(input("\nYour wish is my command: ").lower().split())
             
             if args.place:
