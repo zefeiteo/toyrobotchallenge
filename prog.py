@@ -1,6 +1,7 @@
 import os
 from toyrobot.table import Table
 from toyrobot.robot import Robot
+from toyrobot.controller import Controller
 
 def main():
     # Clears terminal
@@ -8,14 +9,11 @@ def main():
 
     # Initialise variables
     table = Table(5,5)
-    
-    # Test cases
-    headings = ['north', 'east', 'south', 'west']
-    for i, _ in enumerate(headings):
-        robot = Robot(2,2,headings[i])
-        dX, dY = robot.compute_coord_move()
-        robot.compute_coord(table, dX, dY)
-        print(robot)
-    
+    robot = Robot(0,0,'north')
+    controller = Controller()
+
+    # Parse variables
+    controller.parse_cmd(robot, table)
+
 if __name__ == "__main__":
     main()
