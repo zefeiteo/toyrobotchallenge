@@ -30,14 +30,14 @@ class Controller():
                             help="Exits program")
     
         # Initialises robot with place command
-        args = self.parser.parse_args(input("\nPlace me somewhere: ").split())
+        args, _ = self.parser.parse_known_args(input("\nPlace me somewhere: ").split())
         robot.currX = int(args.place[0])
         robot.currY = int(args.place[1])
         robot.currHead = args.place[2]
 
         # Receives commands
         while True:
-            args = self.parser.parse_args(input("\nYour wish is my command: ").split())
+            args, _ = self.parser.parse_known_args(input("\nYour wish is my command: ").split())
             
             if args.move:
                 dX, dY = robot.compute_coord_move()
