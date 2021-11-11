@@ -3,6 +3,7 @@ import argparse
 
 from toyrobot.table import Table
 from toyrobot.robot import Robot
+from toyrobot.robot import InvalidPosError, InvalidHeadError
 
 class Controller():
     """Command line program that controls the robot"""
@@ -28,12 +29,22 @@ class Controller():
                             help="Report robot position")
         self.parser.add_argument("-x", "--exit", action="store_true",
                             help="Exits program")
-    
+
         # Initialises robot with place command
         args, _ = self.parser.parse_known_args(input("\nPlace me somewhere: ").split())
-        robot.currX = int(args.place[0])
-        robot.currY = int(args.place[1])
-        robot.currHead = args.place[2]
+        dX = int(args.place[0])
+        dY = int(args.place[1])
+        head = args.place[2]
+
+        # Checks if robot has exceeded Table dimensions or entered heading wrongly
+        # A try...except block would be better practice, however could not be implemented as intended
+        checkPos = robot.compute_coord(table, dX, dY)
+        if checkPos == InvalidPosError:
+            sys.exit(0)
+
+        checkHead = robot.check_head(head)
+        if checkHead == InvalidHeadError:
+            sys.exit(0)
 
         # Receives commands
         while True:

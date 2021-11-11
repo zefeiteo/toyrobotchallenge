@@ -18,7 +18,7 @@ class Robot():
 
     def compute_coord(self, table, dX, dY):
         """Computes change in coordinates"""
-        
+
         # Increments robot position
         self.propX = self.currX + dX
         self.propY = self.currY + dY
@@ -29,9 +29,11 @@ class Robot():
                 self.currX = self.propX
                 self.currY = self.propY
             else:
-                InvalidPosError
+                print("Table bounds exceeded in y-direction, please try again.\n")
+                return InvalidPosError
         else:
-            InvalidPosError
+            print("Table bounds exceeded in x-direction, please try again.\n")
+            return InvalidPosError
 
     def compute_coord_move(self):
         """Defines change in coordinates for given heading"""
@@ -70,7 +72,24 @@ class Robot():
         # Applies heading
         self.currHead = self.headStr[listIndex]
 
+    def check_head(self, userHead):
+        """Checks if user-defined heading is valid"""
+
+        # Checks heading against enumerated list
+        for index, head in enumerate(self.headStr):
+            if head == userHead:
+                self.currHead = userHead
+                break
+        else:
+            print("Invalid heading entered, please try again.\n")
+            return InvalidHeadError
+
 class InvalidPosError(Exception):
     """Raises error if Table bounds exceeded"""
+
+    pass
+
+class InvalidHeadError(Exception):
+    """Raises error if heading is invalid"""
 
     pass
