@@ -20,14 +20,14 @@ class Robot():
         """Computes change in coordinates"""
 
         # Increments robot position
-        self.propX = self.currX + dX
-        self.propY = self.currY + dY
+        propX = self.currX + dX
+        propY = self.currY + dY
 
         # Prevents robot from exceeding Table dimensions
-        if self.propX >= 0 and self.propX <= table.dimX-1:
-            if self.propY >= 0 and self.propY <= table.dimY-1:
-                self.currX = self.propX
-                self.currY = self.propY
+        if propX >= 0 and propX <= table.dimX-1:
+            if propY >= 0 and propY <= table.dimY-1:
+                self.currX = propX
+                self.currY = propY
             else:
                 print("Table bounds exceeded in y-direction, please try again.\n")
                 return InvalidPosError
