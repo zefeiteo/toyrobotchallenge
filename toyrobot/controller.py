@@ -11,7 +11,6 @@ class Controller():
         """Defines parser"""
 
         self.parser = argparse.ArgumentParser(description="Controls a robot")
-        self.args = self.parser.parse_args()
 
     def parse_cmd(self, robot, table):
         """Parses commands fed to the controller"""
