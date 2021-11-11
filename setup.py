@@ -1,7 +1,7 @@
 from setuptools import find_packages, setup
 
 requirements = [
-    "setuptools"
+    "setuptools",
     "argparse>=1.4.0",
 ]
 
@@ -24,6 +24,6 @@ setup(
     packages=find_packages(include=["toyrobot"]),
     test_suite="tests",
     url="https://github.com/zefeiteo/toyrobotchallenge",
-    version="0.1.0",
+    version="0.1.1",
     zip_safe=False,
 )
