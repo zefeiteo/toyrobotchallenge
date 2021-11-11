@@ -9,10 +9,10 @@ def main():
 
     # Initialise variables
     table = Table(5,5)
-    robot = Robot(0,0,'north')
+    robot = Robot(None, None, None)
     controller = Controller()
 
-    # Parse variables
+    # Start command line program
     controller.parse_cmd(robot, table)
 
 if __name__ == "__main__":
