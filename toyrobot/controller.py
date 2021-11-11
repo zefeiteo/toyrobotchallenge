@@ -31,7 +31,14 @@ class Controller():
                             help="Exits program")
 
         # Initialises robot with place command
-        args, _ = self.parser.parse_known_args(input("\nPlace me somewhere: ").lower().split())
+        while True:
+            args, _ = self.parser.parse_known_args(input("\nPlace me somewhere: ").lower().split())
+            if args.place is None:
+                print("\nRobot placement failed, try [-p x y heading].")
+            else:
+                break
+
+        # Stores robot placement information
         dX = int(args.place[0])
         dY = int(args.place[1])
         head = args.place[2].lower()
@@ -50,7 +57,9 @@ class Controller():
         while True:
             args, _ = self.parser.parse_known_args(input("\nYour wish is my command: ").lower().split())
             
-            if args.move:
+            if args.place:
+                print("\nRobot placement only allowed at the start of the program, please try again.")
+            elif args.move:
                 dX, dY = robot.compute_coord_move()
                 robot.compute_coord(table, dX, dY)
             elif args.left:
