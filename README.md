@@ -20,21 +20,20 @@
 * You will need to set up your Python path.
 
 ## CLI commands
-    _usage: prog.py [-h] [-p x y head] [-m] [-l] [-r] [--report] [-x]_
-    _-h     --help      Show this help message and exit_
-    _-p     --place     Sets robot home position & heading_
-    _-m     --move      Moves robot 1 step forward_
-    _-l     --left      Rotates robot -90deg_
-    _-r     --right     Rotates robot +90deg_
-    _       --report    Reports robot position_
-    _-x     --exit      Exits program_
+    *usage: prog.py [-h] [-p x y head] [-m] [-l] [-r] [--report] [-x]*
+    *-h     --help      Show this help message and exit*
+    *-p     --place     Sets robot home position & heading*
+    *-m     --move      Moves robot 1 step forward*
+    *-l     --left      Rotates robot -90deg*
+    *-r     --right     Rotates robot +90deg*
+    *       --report    Reports robot position*
+    *-x     --exit      Exits program*
 
 ## Example input
-    _--place 1 2 east_
-    _--move_
-    _--move_
-    _--left_
-    _--move_
-    _--report_
-    > 3,3,NORTH
-    _--exit_
+    *--place 1 2 east*
+    *--move*
+    *--move*
+    *--left*
+    *--move*
+    *--report*
+    *--exit*
