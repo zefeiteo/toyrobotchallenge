@@ -2,8 +2,7 @@ import sys
 import argparse
 
 from toyrobot.table import Table
-from toyrobot.robot import Robot
-from toyrobot.robot import InvalidPosError, InvalidHeadError
+from toyrobot.robot import Robot, InvalidPosError, InvalidHeadError
 from toyrobot.gui import ControllerGUI
 
 class Controller():
@@ -23,11 +22,11 @@ class Controller():
         self.parser.add_argument("-m", "--move", action="store_true",
                             help="Moves robot 1 step forward")
         self.parser.add_argument("-l", "--left", action="store_true",
-                            help="Rotate robot -90deg")
+                            help="Rotates robot -90deg")
         self.parser.add_argument("-r", "--right", action="store_true",
-                            help="Rotate robot +90deg")
+                            help="Rotates robot +90deg")
         self.parser.add_argument("--report", action="store_true",
-                            help="Report robot position")
+                            help="Reports robot position")
         self.parser.add_argument("-x", "--exit", action="store_true",
                             help="Exits program")
 
@@ -65,15 +64,20 @@ class Controller():
             
             if args.place:
                 print("\nRobot placement only allowed at the start of the program, please try again.")
+            
             elif args.move:
                 dX, dY = robot.check_coord()
                 robot.compute_coord(table, dX, dY)
+            
             elif args.left:
                 robot.compute_head('left')
+            
             elif args.right:
                 robot.compute_head('right')
+            
             elif args.report:
                 print(robot)
+            
             elif args.exit:
                 print("\nExiting the program.\n")
                 sys.exit(0)
