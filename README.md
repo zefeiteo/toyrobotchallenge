@@ -21,9 +21,11 @@
 
 ## Run instructions
 To install the necessary requirements:
+    
     python3 -m pip install -r requirements.txt
 
 To run the main program:
+    
     python3 -m prog
 
 ## CLI commands
@@ -44,3 +46,16 @@ To run the main program:
     --move
     --report
     --exit
+
+## Abbreviations used
+    args    arguments
+    coord   coordinates
+    curr    current
+    d       delta i.e. the change in
+    dim     dimensions
+    head    heading
+    pos     position
+    prop    proposed
+    str     string
+    sym     symbol
+    temp    temporary
