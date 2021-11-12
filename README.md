@@ -28,6 +28,10 @@ To run the main program:
     
     python3 -m prog
 
+To run individual unit tests:
+
+    python3 -m unittest tests/foo.py
+
 ## CLI commands
     usage: prog.py [-h] [-p x y head] [-m] [-l] [-r] [--report] [-x]
     -h     --help      Show this help message and exit
